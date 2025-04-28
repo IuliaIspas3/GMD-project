@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
     private bool isGrounded;
     private bool doubleJump;
+    private int count;
+    public TextMeshProUGUI countText;
 
     void Start()
     {
@@ -75,6 +79,11 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = transform.forward * movementY * speed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + movement);
     }
+    
+    void SetCountText() 
+    {
+        countText.text =  count.ToString(); 
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -89,4 +98,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            other.gameObject.SetActive(false);
+            count++;
+            SetCountText();
+        }
+    }
 }
