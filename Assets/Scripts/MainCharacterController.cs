@@ -133,6 +133,7 @@ public class MainCharacterController : MonoBehaviour
 
     void OnJump()
     {
+        Debug.Log("Jumps");
         if (!sideWalk)
         {
             if (isGrounded)
@@ -214,6 +215,7 @@ public class MainCharacterController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("Ground touched");
             isGrounded = true;
             doubleJump = false;
             animator.SetBool("isJumping", false);
