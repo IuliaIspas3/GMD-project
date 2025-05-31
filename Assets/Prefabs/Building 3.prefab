@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7621637087124813693}
   - component: {fileID: 6830350741514970488}
   - component: {fileID: 5017108944553603670}
+  - component: {fileID: 5653789866542343292}
   m_Layer: 0
   m_Name: Building 3
   m_TagString: Untagged
@@ -1913,6 +1914,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &5653789866542343292
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135541219714635634}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.7993846, y: 10.42252, z: 15.538095}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &117988903673520292
 PrefabInstance:
   m_ObjectHideFlags: 0
