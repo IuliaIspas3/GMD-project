@@ -10,6 +10,7 @@ TagManager:
   - UnderObstacle
   - tightObstacle
   - lampCollider
+  - Back
   layers:
   - Default
   - TransparentFX

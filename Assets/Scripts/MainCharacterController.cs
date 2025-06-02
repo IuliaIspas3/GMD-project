@@ -16,7 +16,7 @@ public class MainCharacterController : MonoBehaviour
 
     private bool isGrounded;
     private bool doubleJump;
-    private bool sideWalk = false;
+    public bool sideWalk = false;
     public bool crouching;
     private Quaternion targetRotation;
     private Coroutine rotationCoroutine;

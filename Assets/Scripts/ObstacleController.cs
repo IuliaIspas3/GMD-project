@@ -8,18 +8,12 @@ public class ObstacleController : MonoBehaviour
             if (other.CompareTag("Character"))
             {
                 Debug.Log("Player entered the trigger zone!");
+                if (transform.gameObject.CompareTag("tightObstacle")) ;
+                {
+                    
+                }
             }
         }
-    
-        /*
-        private void OnTriggerStay(Collider other)
-        {
-            if (other.CompareTag("Character"))
-            {
-                Debug.Log("Player is still in the trigger zone.");
-            }
-        }
-        */
     
         private void OnTriggerExit(Collider other)
         {
