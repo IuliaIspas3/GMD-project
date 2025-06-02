@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Car
+  - Character
+  - Coin
+  - HealthBarCanvas
   layers:
   - Default
   - TransparentFX
