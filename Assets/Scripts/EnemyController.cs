@@ -9,10 +9,12 @@ public class EnemyController : MonoBehaviour
 
     public float chaseRange = 15f;
     public float punchRange = 2f;
+    public float speed = 4f;
     
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = speed;
         animator = GetComponentInChildren<Animator>();
         
         if (character == null)
