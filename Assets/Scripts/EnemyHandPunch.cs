@@ -3,9 +3,9 @@ using UnityEngine;
 public class EnemyHandPunch : MonoBehaviour
 {
     public float damageAmount = 0.1f;
-    public float damageCooldown = 0.1f;
+    public float damageCooldown = 1f;
 
-    private float lastDamageTime = -900f;
+    private float lastDamageTime = -999f;
     private HealthBarFiller healthBar;
 
 

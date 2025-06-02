@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBarFiller : MonoBehaviour
@@ -20,7 +21,7 @@ public class HealthBarFiller : MonoBehaviour
         if (healthImage.fillAmount <= 0f)
         {
             Debug.Log("Player is dead.");
-            // Trigger death logic here (animation, game over, etc.)
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }
