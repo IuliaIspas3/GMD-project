@@ -10,6 +10,7 @@ public class CoinController : MonoBehaviour
     void Start()
     {
         rotationAxis = Vector3.up;
+        coinCount = 0;
     }
 
     void Update()
