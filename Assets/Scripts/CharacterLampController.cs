@@ -20,7 +20,7 @@ public class CharacterLampController : MonoBehaviour
 
     void Update()
     {
-        if (canClimb && !isClimbing && Keyboard.current.lKey.wasPressedThisFrame)
+        if (canClimb && !isClimbing && (Keyboard.current.lKey.wasPressedThisFrame || Input.GetKeyDown(KeyCode.Joystick1Button3)))
         {
             StartCoroutine(MoveToTopOfLamp());
         }

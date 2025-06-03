@@ -59,15 +59,16 @@ public class MainCharacterController : MonoBehaviour
             rb.MovePosition(rb.position + forwardMovement);
         }
     }
+    
 
     void Update()
     {
-        if (Keyboard.current.pKey.wasPressedThisFrame)
+        if (Keyboard.current.pKey.wasPressedThisFrame || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             ToggleSideWalk();
         }
 
-        if (Keyboard.current.bKey.wasPressedThisFrame)
+        if (Keyboard.current.bKey.wasPressedThisFrame || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             ToggleCrouching();
         }
