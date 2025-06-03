@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,15 +20,31 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.rightTrigger.ReadValue() > 0.5f)
         {
             string currentScene = SceneManager.GetActiveScene().name;
             if (currentScene == "street-map")
             {
                 SceneManager.LoadScene("IntroScene");
             }
-            else Application.Quit(); 
+            else
+            {
+                Application.Quit(); 
+                #if UNITY_EDITOR
+                            UnityEditor.EditorApplication.isPlaying = false;
+                #endif
+            }
         }
+
+        if (Gamepad.current.leftTrigger.ReadValue() > 0.5f) 
+        {
+            string currentScene = SceneManager.GetActiveScene().name;
+            if (currentScene == "IntroScene")
+            {
+                SceneManager.LoadScene("street-map");
+            }
+        }
+        
     }
     
     public static void SetMessage(string message, Color color)
