@@ -160,7 +160,7 @@ public class MainCharacterController : MonoBehaviour
         if (sideWalk)
         {
             rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-            Debug.Log("Side-walking ENABLED (X-axis)");
+            Debug.LogWarning("Side-walking ENABLED (X-axis)");
         }
         else
         {
