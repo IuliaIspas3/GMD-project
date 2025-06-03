@@ -84,14 +84,16 @@ public class MainCharacterController : MonoBehaviour
 
         if (sideWalk)
         {
-            if (Keyboard.current.leftArrowKey.isPressed || (Input.GetAxis("Horizontal") < -0.1f))
+            float xAxis = Input.GetAxis("Horizontal");
+            Debug.LogWarning("joystick input" + xAxis);
+            if (Keyboard.current.leftArrowKey.isPressed || xAxis < -0.1f)
             {
                 movementY = -1;
 
                 animator.SetBool("isSideWalkingLeft", true);
                 animator.SetBool("isSideWalkingRight", false);
             }
-            else if (Keyboard.current.rightArrowKey.isPressed || (Input.GetAxis("Horizontal") > 0.1f))
+            else if (Keyboard.current.rightArrowKey.isPressed || xAxis > 0.1f)
             {
                 movementY = 1;
 
