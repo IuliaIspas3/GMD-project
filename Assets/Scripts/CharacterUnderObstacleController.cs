@@ -31,7 +31,7 @@ public class CharacterUnderObstacleController : MonoBehaviour
         if (other.CompareTag("UnderObstacle"))
         {
             Debug.LogWarning("Left a UnderObstacle");
-            if (Input.GetKeyDown(KeyCode.B))
+            if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Joystick1Button2))
             {
                 float heightDifference = originalSize.y - crouchHeight;
                 Debug.LogWarning("crouching");

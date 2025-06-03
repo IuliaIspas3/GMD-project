@@ -42,7 +42,7 @@ public class CharacterTightController : MonoBehaviour
     {
         if (playerInZone)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button1))
             {
                 Debug.LogWarning("P down");
                 boxCollider.size = ogSize;
