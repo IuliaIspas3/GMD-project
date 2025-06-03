@@ -100,7 +100,6 @@ public class MainCharacterController : MonoBehaviour
             {
                 movementY = 0;
 
-                // Stop both animations if no input
                 animator.SetBool("isSideWalkingLeft", false);
                 animator.SetBool("isSideWalkingRight", false);
             }
@@ -122,12 +121,12 @@ public class MainCharacterController : MonoBehaviour
         if (crouching)
         {
             animator.SetBool("isCrouchWalking", movementY != 0);
-            animator.SetBool("isRunning", false); // ensure running is off
+            animator.SetBool("isRunning", false); 
         }
         else
         {
             animator.SetBool("isRunning", movementY != 0);
-            animator.SetBool("isCrouchWalking", false); // ensure crouchwalk is off
+            animator.SetBool("isCrouchWalking", false); 
         }
     }
 
@@ -186,7 +185,7 @@ public class MainCharacterController : MonoBehaviour
             yield return null;
         }
 
-        characterModel.transform.rotation = targetRotation; // ensure final rotation
+        characterModel.transform.rotation = targetRotation;
     }
 
 

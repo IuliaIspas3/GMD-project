@@ -27,7 +27,7 @@ public class CoinController : MonoBehaviour
              coinCount++;
              if (GameManager.coinText != null)
                  GameManager.coinText.text = coinCount.ToString();
-             if (coinCount >= 20)
+             if (coinCount >= 10)
                  SceneManager.LoadScene("WinningScene");
              Destroy(gameObject);
          }

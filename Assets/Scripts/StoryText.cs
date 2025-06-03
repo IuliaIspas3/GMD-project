@@ -20,15 +20,14 @@ public class TypewriterEffect : MonoBehaviour
     {
         for (int i = 0; i < fullText.Length; i++)
         {
-            // If there's a newline character, handle it
             if (fullText[i] == '\\' && i + 1 < fullText.Length && fullText[i + 1] == 'n')
             {
-                currentText += "\n"; // Add the actual line break
-                i++; // Skip the 'n' after '\\'
+                currentText += "\n"; 
+                i++; 
             }
             else
             {
-                currentText += fullText[i]; // Add the current character
+                currentText += fullText[i]; 
             }
 
             textComponent.text = currentText;

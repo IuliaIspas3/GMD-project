@@ -4,7 +4,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
-    public Vector3 offset = new Vector3(0, 3, -5); // Keeps camera above and behind
+    public Vector3 offset = new Vector3(0, 3, -5); 
     public float smoothSpeed = 5f;
     private MainCharacterController controllerScript;
 

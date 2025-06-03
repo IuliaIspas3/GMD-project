@@ -7,7 +7,7 @@ public class CharacterUnderObstacleController : MonoBehaviour
     private Vector3 originalSize;
     private Vector3 originalCenter;
     public float crouchHeight = 0.5f;
-    private bool playerInZone;
+    private bool playerInZone = false;
 
     void Start()
     {

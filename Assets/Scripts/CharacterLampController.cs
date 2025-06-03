@@ -10,7 +10,7 @@ public class CharacterLampController : MonoBehaviour
     private Transform lampTransform;
     private bool isClimbing = false;
 
-    public float climbDuration = 1.0f; // time it takes to climb on top
+    public float climbDuration = 1.0f; 
 
     void Start()
     {
@@ -47,7 +47,7 @@ public class CharacterLampController : MonoBehaviour
             yield return null;
         }
 
-        rb.MovePosition(targetPosition); // snap to final position
+        rb.MovePosition(targetPosition); 
         isClimbing = false;
     }
 
