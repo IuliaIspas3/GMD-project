@@ -9345,6 +9345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5567360020110087944}
   - component: {fileID: 7672494188896254291}
+  - component: {fileID: 3735198333423930197}
   m_Layer: 0
   m_Name: Collider
   m_TagString: lampCollider
@@ -9388,6 +9389,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0160408, y: 2.8202238, z: 2.5425034}
   m_Center: {x: -0.5080204, y: -0.9101119, z: -1.5866661}
+--- !u!114 &3735198333423930197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2625693815617624207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e3cca8898fb4a49a7f10c73f305233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5234440571379301551
 GameObject:
   m_ObjectHideFlags: 0
