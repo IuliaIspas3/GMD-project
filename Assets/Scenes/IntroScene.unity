@@ -1317,7 +1317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 600, y: -250}
+  m_AnchoredPosition: {x: 600, y: -140}
   m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088767750
@@ -1337,8 +1337,10 @@ MonoBehaviour:
     touched the standing stones \u2014 ancient, humming with power...and the world
     shattered around her.\\n\\nWhen she opened her eyes, centuries had passed.\\n\\nThis
     is Edinburgh\u2026 but not the one she knew.\\n\\nShe has crossed time itself.
-    Lost in the future.\\n\\nHunted by enemies she cannot yet name.\\n\\nBut she
-    is a warrior.\\n\\nAnd she will survive. "
+    Lost in the future.\\n\\nHunted by enemies she cannot yet name.\\n\\nBut the
+    stones left behind a trace - a scattered path of acient relics disguised as coins.\\n\\nIf
+    she can collect them, their magic might open the way back\\n\\nBack to her time,
+    her home.\\n\\nBut she is a warrior.\\n\\nAnd she will survive. "
 --- !u!114 &2088767751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,9 +1363,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Her name is Greer.\n\nA warrior born in the 18th century.\n\nShe touched
     the standing stones \u2014 ancient, humming with power \u2014 and the world shattered
-    around him.\n\nWhen she opened her eyes, centuries had passed.\n\nThis is Edinburgh\u2026
+    around her.\n\nWhen she opened her eyes, centuries had passed.\n\nThis is Edinburgh\u2026
     but not the one she knew.\n\nShe has crossed time itself.\n\nLost in the future.\n\nHunted
-    by enemies she cannot yet name.\n\nBut she is a warrior. And she will survive."
+    by enemies she cannot yet name.\n\nBut the stones left behind a trace \u2014
+    a scattered path of ancient relics disguised as coins.\n\nIf she can collect
+    them all, their magic might open the way back.\n\nBack to her time, her home.\n\nBut
+    she is a warrior. And she will survive."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
