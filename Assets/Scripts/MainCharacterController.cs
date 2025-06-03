@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -83,14 +84,14 @@ public class MainCharacterController : MonoBehaviour
 
         if (sideWalk)
         {
-            if (Keyboard.current.leftArrowKey.isPressed)
+            if (Keyboard.current.leftArrowKey.isPressed || (Input.GetAxis("Horizontal") < -0.01f))
             {
                 movementY = -1;
 
                 animator.SetBool("isSideWalkingLeft", true);
                 animator.SetBool("isSideWalkingRight", false);
             }
-            else if (Keyboard.current.rightArrowKey.isPressed)
+            else if (Keyboard.current.rightArrowKey.isPressed || (Input.GetAxis("Horizontal") > 0.01f))
             {
                 movementY = 1;
 
