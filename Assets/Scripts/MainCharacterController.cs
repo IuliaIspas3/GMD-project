@@ -84,29 +84,26 @@ public class MainCharacterController : MonoBehaviour
 
         if (sideWalk)
         {
-            float xAxis = Input.GetAxis("Horizontal");
-            Debug.LogWarning("joystick input" + xAxis);
-            if (Keyboard.current.leftArrowKey.isPressed || xAxis == -1f)
+            float xAxis = Gamepad.current?.leftStick.x.ReadValue() ?? 0f;
+            if (xAxis < -0.2f)
             {
                 movementY = -1;
-
                 animator.SetBool("isSideWalkingLeft", true);
                 animator.SetBool("isSideWalkingRight", false);
             }
-            else if (Keyboard.current.rightArrowKey.isPressed || xAxis == 1f)
+            else if (xAxis > 0.2f)
             {
                 movementY = 1;
-
                 animator.SetBool("isSideWalkingLeft", false);
                 animator.SetBool("isSideWalkingRight", true);
             }
             else
             {
                 movementY = 0;
-
                 animator.SetBool("isSideWalkingLeft", false);
                 animator.SetBool("isSideWalkingRight", false);
             }
+
         }
     }
 
@@ -114,23 +111,23 @@ public class MainCharacterController : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
-        rotationX = movementVector.x;
-        movementY = movementVector.y;
 
         if (!sideWalk)
         {
+            rotationX = movementVector.x;
+            movementY = movementVector.y;
+
             animator.SetBool("isRunning", movementY != 0);
-        }
-        
-        if (crouching)
-        {
-            animator.SetBool("isCrouchWalking", movementY != 0);
-            animator.SetBool("isRunning", false); 
-        }
-        else
-        {
-            animator.SetBool("isRunning", movementY != 0);
-            animator.SetBool("isCrouchWalking", false); 
+
+            if (crouching)
+            {
+                animator.SetBool("isCrouchWalking", movementY != 0);
+                animator.SetBool("isRunning", false);
+            }
+            else
+            {
+                animator.SetBool("isCrouchWalking", false);
+            }
         }
     }
 

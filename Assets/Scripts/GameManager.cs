@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetAxis("10") == 1)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             string currentScene = SceneManager.GetActiveScene().name;
             if (currentScene == "street-map")
