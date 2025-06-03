@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CoinController : MonoBehaviour
 {
     public float rotationSpeed = 180f;
     private Vector3 rotationAxis;
-    // public float lightIntensity = 1;
-    // private Light light;
+    public static int coinCount = 0;
+
     void Start()
     {
         rotationAxis = Vector3.up;
-        // light = gameObject.GetComponent<Light>();
-        // light.range = lightIntensity;
     }
 
     void Update()
@@ -24,7 +23,12 @@ public class CoinController : MonoBehaviour
     
          if (other.CompareTag("Character"))
          {
-            Debug.Log("Coin collected!");
+             Debug.Log("Coin collected!");
+             coinCount++;
+             if (GameManager.coinText != null)
+                 GameManager.coinText.text = coinCount.ToString();
+             if (coinCount >= 20)
+                 SceneManager.LoadScene("WinningScene");
              Destroy(gameObject);
          }
      }

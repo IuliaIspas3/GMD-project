@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/street-map.unity
     guid: 8929334a6aef2ec439833fe6af3e2988
+  - enabled: 1
+    path: Assets/Scenes/WinningScene.unity
+    guid: a3795812655a903468deae70f3d188de
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 959f183ef9433594e8d8865ade5b2813, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
