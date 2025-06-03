@@ -19,9 +19,14 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetAxis("10") == 1)
         {
-            SceneManager.LoadScene("IntroScene"); 
+            string currentScene = SceneManager.GetActiveScene().name;
+            if (currentScene == "street-map")
+            {
+                SceneManager.LoadScene("IntroScene");
+            }
+            else Application.Quit(); 
         }
     }
     
