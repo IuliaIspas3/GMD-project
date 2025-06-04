@@ -3,6 +3,7 @@
 Link to youtube video : https://youtu.be/7PEajFUU__w
 
 Blog posts:
+
 Blog #1 - https://github.com/IuliaIspas3/GMD-project/blob/main/blogs/Blog%20%231%20-%20Roll-a-ball.md
 
 Blog #2 - https://github.com/IuliaIspas3/GMD-project/blob/main/blogs/Blog%20%232%20-%20Game%20Design%20Document.md
