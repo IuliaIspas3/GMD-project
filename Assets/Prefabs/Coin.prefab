@@ -176,8 +176,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.2111347
+  m_Center: {x: -0.021324012, y: 0.041616425, z: 0.050149247}
 --- !u!114 &92471994703132167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9383354
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -341,7 +341,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: 3364fe5bee055d5499d0460903b95b2d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

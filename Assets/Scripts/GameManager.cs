@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current.rightTrigger.ReadValue() > 0.5f)
         {
             string currentScene = SceneManager.GetActiveScene().name;
-            if (currentScene == "street-map")
+            if (currentScene == "street-map" || currentScene == "GameOver" || currentScene == "WinningScene")
             {
                 SceneManager.LoadScene("IntroScene");
             }
