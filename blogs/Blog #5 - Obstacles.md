@@ -1,0 +1,14 @@
+As we had a map ready we needed way to make the character interact with certain elements. It could obviously double jump on different elements but we also wanted it to squeeze in the gaps between buildings, climb on the buildings and sneak beneath obstacles.  
+We created 3 types of actions that will make the game more immersive and allow the character to reach different parts of the map.  
+
+1.You can climb some of the lamps that are spread around the map, all of the standing lamps and some of the hanging if its necessary to progress. The way it works is the top of the lamp has a collider that on trigger allows you to press a “L” button on keyboard or Yellow button on the arcade machine (y on controller) to start a coroute that will calculate the max top position of the lamp object and then slowly move the character object there. It would be nice to add a climbing animation in the future while the object perform the action. When you reach the lamp’s collider, a UI hint shows up on the bottom of the screen to let you know about the possible action. The climbing is only allowed when you are in the lamp’s collider zone. 
+
+
+2. You can crouch to fit underneath some obstacles. If such obstacle is met, where the character needs to crouch to fit under, it will trigger a collider that will  
+a) Show the hint on the bottom of the screen that crouching is required (a designated button is pressed) and otherwise the character cannot go through  
+b) If a “b” button on the keyboard/blue button on the arcade machine/x button on the controller is pressed, The player object’s collider will shrink and reposition it’s center to be able to fit underneath the obstacle’s collider and therefore pass the obstacle. 
+The crouching can be performed at any time during the gameplay, not only in the designated areas. 
+
+3. Sometimes to reach a coin, the character needs to squeeze between buildings, therefore a “side-walking” action was implemented. Similar to the crouching action, when a player gets to a zone where a side-walking action is needed (triggers a collider tagged as “tightObstacle”) UI will inform the player about the needed action. In order for the player object to not be able to move into the gaps, when it triggers the obstacle collider, the player’s own collider will expand in the x axis to “not fit” through the gap, therefore blocking the user to bypass the obstacle. Only if in the zone and the specific button is presses (“p” on keyboard, red button on arcade and B on controller) then the player’s object collider goes back to the initial state and the character aligns itself parallel to the building wall and is able to go to left or right to squeeze in the gap. This action is allowed to be performed at any time in the gameplay, even though it probably shouldn’t.  
+
+ 
