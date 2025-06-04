@@ -6,7 +6,7 @@ public class ObstacleController : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Character"))
+            if (other.CompareTag("CharacterParent"))
             {
                 Debug.Log("Player entered the trigger zone!");
                 if (transform.gameObject.CompareTag("tightObstacle")) 
@@ -28,7 +28,7 @@ public class ObstacleController : MonoBehaviour
     
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("Character"))
+            if (other.CompareTag("CharacterParent"))
             {
                 Debug.Log("Player exited the trigger zone.");
                 GameManager.ClearMessage();

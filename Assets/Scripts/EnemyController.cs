@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
         
         if (character == null)
         {
-            GameObject foundPlayer = GameObject.FindGameObjectWithTag("Character");
+            GameObject foundPlayer = GameObject.FindGameObjectWithTag("CharacterParent");
             if (foundPlayer != null)
             {
                 character = foundPlayer.transform;

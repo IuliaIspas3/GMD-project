@@ -25,7 +25,7 @@ public class EnemyHandPunch : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Character") && Time.time - lastDamageTime >= damageCooldown)
+        if (other.CompareTag("CharacterParent") && Time.time - lastDamageTime >= damageCooldown)
         {
             Debug.Log("Punch hit the character!");
 

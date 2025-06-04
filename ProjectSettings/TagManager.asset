@@ -9,6 +9,11 @@ TagManager:
   - Character
   - Coin
   - HealthBarCanvas
+  - lampCollider
+  - tightObstacle
+  - Back
+  - UnderObstacle
+  - CharacterParent
   layers:
   - Default
   - TransparentFX

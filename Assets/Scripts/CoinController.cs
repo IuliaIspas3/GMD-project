@@ -24,14 +24,17 @@ public class CoinController : MonoBehaviour
      {
         Debug.Log("Tag is: " + other.tag);
     
-         if (other.CompareTag("Character"))
+         if (other.CompareTag("CharacterParent"))
          {
              Debug.Log("Coin collected!");
              coinCount++;
              if (GameManager.coinText != null)
                  GameManager.coinText.text = coinCount.ToString();
              if (coinCount >= 10)
-                 SceneManager.LoadScene("WinningScene");
+             {
+                 SceneManager.LoadSceneAsync("WinningScene");
+             }
+
              audioSource.Play();
              Destroy(gameObject, audioSource.clip.length);
 
