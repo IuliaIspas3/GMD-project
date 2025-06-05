@@ -1,3 +1,5 @@
+The game is called The Lost Century
+
 !!! The game version that is playable on Arcade machine can be found on /joystick-controller branch, the main branch has a keyboard input only !!!
 
 Link to youtube video : https://youtu.be/7PEajFUU__w
