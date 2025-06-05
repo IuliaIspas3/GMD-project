@@ -1,4 +1,5 @@
 Iulia-Maria Ispas:
+
 The development of the “Roll-a-ball” project followed the structured steps provided in the tutorial, ensuring a solid foundation for the core game mechanics. The game environment was created using basic Unity objects, with a plane for the ground and cubes for obstacles and walls. The player character, a sphere with a Rigidbody component, moves using keyboard input, with a script applying force to control movement smoothly.
 Collectible objects were added to the scene, each with a trigger collider and a script enabling collection upon player contact. Once collected, they disappear, contributing to the player’s score displayed on the UI, which updates dynamically to reflect progress.
 To increase difficulty, an AI-controlled enemy was implemented using Unity’s NavMesh system. The enemy, represented by a resized cube, dynamically navigates the scene, following the player while avoiding obstacles. The NavMesh Agent component enables smooth movement along walkable areas, requiring players to maneuver strategically.
@@ -8,7 +9,8 @@ To enhance visuals, I applied textures to various objects. The ground was given 
 A day-night cycle was implemented to add dynamism, transitioning every 30 seconds. This was achieved with a dedicated GameObject controlling lighting transitions via a custom C# script that gradually adjusts lighting parameters. A Day-Night Skyboxes package from the Unity Asset Store was used to create realistic sky transitions, making the game environment more engaging.
 These enhancements make the Roll-a-Ball game more immersive and visually appealing. Textures improve aesthetics, while the day-night cycle adds more dynamism. The AI-controlled enemy introduces a strategic challenge, and clear win/lose conditions provide structured gameplay. This project was a great opportunity to learn Unity fundamentals while exploring materials, textures, and environmental scripting.
 
-Maria Bartnik
+Maria Bartnik:
+
 The roll-a-ball project was made following the tutorial from Unity Learn. The general idea of the project was to create a small 3D game with a playable object, collectibles and AI enemy that follows you around. 
 It started with a platform that was the floor and then by using and transforming four 3D cube object to act as the walls. Then it explained on how to structure the game objects with the concept of parent objects.  
 The playable object was a 3D sphere that has an attached a collider and a Rigidbody. Rigidbody allows the Unity physics to be applied to the object therefore the playable sphere could be moved around and interact with other objects on the map. Collider defined the physical bounds of the object and therefore defined when the objects are touching. Then I added the input component to the player to be able to define in its C# script how an input on a keyboard effects the movement and physics of the sphere. Moving the sphere was done by applying force to the rigidbody component. Afterwards I learned how to move the Main Camera object to follow the player with a specific offset  
